@@ -79,7 +79,7 @@ sql;
               }
 
 
-       //insertamos en categorias
+       //insertamos en temas
 
          $sql=<<<sql
 INSERT INTO `temas`(`titulo`,`titulourl`) VALUES ('Ciencias', 'ciencias'),('Geografía', 'geografia'),('Historia', 'historia'),('Deportes', 'deportes');
@@ -97,7 +97,7 @@ sql;
               }
 
 
-        // creamos tabla cinemania
+        // creamos tabla preguntas
 
            $sql=<<<sql
 create table preguntas(
@@ -120,11 +120,12 @@ sql;
               }
 
 
-              // insertamos datos cinemania
+              // insertamos datos preguntas
 
 
         $sql=<<<sql
-    INSERT INTO `preguntas` (`pregunta`,`tema`) VALUES ('¿Qué es el Big Bang?','1'),('Si decimos que Murcia está situada a 38ºN, nos referimos a:','2'),('¿En qué año tuvo lugar la guerra del Golfo Pérsico?', '3'),('¿Qué deporte es el que usa el balón más grande?', '4');
+    INSERT INTO `preguntas` (`pregunta`,`tema`) VALUES ('¿Qué es el Big Bang?','1'),('Si decimos que Murcia está situada a 38ºN, nos referimos a:','2'),
+    ('¿En qué año tuvo lugar la guerra del Golfo Pérsico?', '3'),('¿Qué deporte es el que usa el balón más grande?', '4');
 sql;
 
         $res=$conexion->exec($sql);
@@ -139,7 +140,7 @@ sql;
             }
 
 
-        // creamos tabla criticas
+        // creamos tabla respuestas
 
 
           $sql=<<<sql
@@ -166,29 +167,25 @@ sql;
 
 
 
-
-
-
-
-
-
-        // insertamos en criticas
+        // insertamos en respuestas
 
 
          $sql=<<<sql
 
-INSERT INTO `respuestas` (`respuesta`, `verdadera`, `pregunta`) VALUES ('Una gran torre construida en el siglo XIX en Londres con un reloj en ella', '0', '1'),('La explosión que dio como origen el universo', '1', '1'),('Su longitud', '0', '2'),('Su latitud', '1', '2'),('1980', '0', '3'),('1991', '1', '3'),('Rugby', '0', '4'),('Baloncesto', '1', '4');
+INSERT INTO `respuestas` (`respuesta`, `verdadera`, `pregunta`) VALUES ('Una gran torre construida en el siglo XIX en Londres con un reloj en ella', '0', '1'),
+('La explosión que dio como origen el universo', '1', '1'),('Su longitud', '0', '2'),('Su latitud', '1', '2'),('1980', '0', '3'),('1991', '1', '3'),('Rugby', '0', '4'),
+('Baloncesto', '1', '4');
 sql;
 
           $res=$conexion->exec($sql);
           if($res===FALSE)
               {
-                  echo "<p>Error al añadir datos en criticas</p>";
+                  echo "<p>Error al añadir datos en respuestas</p>";
                   echo "<p>".$conexion->errorInfo()[2]."</p>";
               }
           else
               {
-                  echo "<p>Se han añadido $res filas en la tabla críticas</p>";
+                  echo "<p>Se han añadido $res filas en la tabla respuestas</p>";
               }
 
 
