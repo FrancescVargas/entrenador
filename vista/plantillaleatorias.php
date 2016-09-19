@@ -13,6 +13,7 @@
   <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/">Inicio</a></div>
   <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregtemas">Preguntas por Temas</a></div>
   <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
+  <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/crearpre">Crear Preguntas</a></div>
 </nav>
 <main>
 <?php

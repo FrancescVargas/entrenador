@@ -14,9 +14,13 @@
       {
         margin: 0;
       }
+      nav
+        {
+            text-align: center;
+        }
       .menu
       {
-        width: 33%;
+        width: 24%;
         font-size: 2em;
         font-weight: bold;
         display: inline-block;
@@ -33,17 +37,31 @@
         color:blue;
 
       }
-        
+
 .recuadro
 {
-    width: 33%;
+   
     border:1px solid blue;
     margin: auto;
     background-color: aliceblue;
+   
 }
     .recuadro a
 {
     font-size: 3em;
+    text-decoration: none;
+    
+
+}
+    .arecuadro
+{
+    border:1px solid blue;
+    
+}
+    .arecuadro:hover
+{
+    background-color: darksalmon;
+    font-size: 1.2em;
     
 }
 
