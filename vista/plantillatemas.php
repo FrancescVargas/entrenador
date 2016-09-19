@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <title>Entrenador-Inicio</title>
-
-
     <link rel="stylesheet" type="text/css" href="/Francesc/GIT-entrenador/entrenador/css/estyles.css">
 </head>
 
@@ -17,9 +15,20 @@
   <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
 </nav>
 <main>
+    
+<?php
 
-<div id="inicio">Bienvenidos a la aplicación de preguntas tipo test de diversos temas</div>
-<div id="subinicio">Podréis responder a preguntas de<br> <span>Ciencias</span>, <span>Deportes</span>, <span>Geografía</span> e <span>Historia</span></div>
+
+    echo "<div class='recuadro'>";
+
+    foreach($data as $fila)
+    {
+        echo "<a href='http://localhost/Francesc/GIT-entrenador/entrenador/index.php/temas?id=".$fila["id"]."'>".$fila["titulo"]."</a><br>";
+    }
+
+    echo "<div>";
+ ?>
+
 </main>
 <footer><p>Por Francesc Vargas con la colaboración de Actibyti Barcelona</p></footer>
 </body>

@@ -1,0 +1,78 @@
+ body{
+        margin: 0;
+      }
+      header
+      {
+        font-size: 3em;
+        text-align: center;
+        color:white;
+        background-color: brown;
+        margin: 0;
+        padding: 2%;
+      }
+      header h1
+      {
+        margin: 0;
+      }
+      .menu
+      {
+        width: 33%;
+        font-size: 2em;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        border:2px solid blue;
+        box-sizing: border-box;
+        margin:0;
+        background-color: aliceblue;
+      }
+      main
+      {
+        background-color: cornsilk;
+        text-align: center;
+        color:blue;
+
+      }
+        
+.recuadro
+{
+    width: 33%;
+    border:1px solid blue;
+    margin: auto;
+    background-color: aliceblue;
+}
+    .recuadro a
+{
+    font-size: 3em;
+    
+}
+
+      #inicio
+      {
+        font-size: 4em;
+        font-weight: bold;
+        padding: 3% 15%;
+      }#subinicio
+      {
+        font-size: 3em;
+        font-weight: bold;
+        padding: 3% 15%;
+      }
+      #subinicio span
+      {
+        color:red;
+        font-size: 2em;
+      }
+      footer
+      {
+        text-align: center;
+        background-color: brown;
+        color:white;
+
+      }
+      footer p
+      {
+        font-size: 2em;
+        padding: 1%;
+        margin: 0;
+      }
