@@ -18,19 +18,20 @@
 <?php
 
 
-    
+
 
 if($data[1]==1)
 {
-    echo "<h2>Correcto!!</h2>
-    <h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es ".$data[0]["respuesta"]."</h3>";
+    echo "<h2 class='resultado'>Correcto!!</h2>";
+
 }
 
 if($data[1]==0)
 {
-    echo "<h2>Fallaste!!</h2>
-    <h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es ".$data[0]["respuesta"]."</h3>";
+    echo "<h2 class='resultado'>Fallaste!!</h2>";
+
 }
+echo "<h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es<br><span> ".$data[0]["respuesta"]."</span></h3>";
 
   if($data["temaoale"]=="ale")
     {

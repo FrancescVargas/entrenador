@@ -102,7 +102,7 @@ sql;
            $sql=<<<sql
 create table preguntas(
 	id int primary key auto_increment,
-	pregunta varchar(100) not null,
+	pregunta varchar(100) not null unique,
   tema int,
   foreign key (tema) references temas(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
