@@ -17,8 +17,7 @@
 <main>
 <?php
 
-
-
+print_r($data);
 
 if($data[1]==1)
 {
@@ -41,6 +40,7 @@ echo "<h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es<br><span> ".$da
     {
     echo '<button><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/temas?id='.$data[0]["id"].'">Otra pregunta de '.$data[0]["titulo"].'?</a></button>';
     }
+
 
  ?>
 

@@ -144,7 +144,8 @@ $app->get("/pregtemas",function($request,$response,$args)
 
 
              $datos[0]=$res->fetch();
-             $datos[1]=$params["resp"];
+             if(isset($params["resp"])) $datos[1]=$params["resp"];
+             else $datos[1]=0;
               $datos["temaoale"]=$params["temaoale"];
 
                 $response=$this->view->render($response,"plantillaresultado.php",$datos);
