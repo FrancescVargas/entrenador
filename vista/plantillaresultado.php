@@ -10,15 +10,17 @@
 <body>
 <header><h1>Entrenador</h1></header>
 <nav>
-  <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/">Inicio</a></div>
-    <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregtemas">Preguntas por Temas</a></div>
-  <div class="menu"><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/">Inicio</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregtemas">Preguntas por Temas</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/crearpre">Crear Preguntas</a></div>
 </nav>
 <main>
 <?php
 
-print_r($data);
 
+echo "<h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es<br><span class='contador3'>3</span><span class='contador2'>2</span><span class='contador1'>1</span><br><span> ".$data[0]["respuesta"]."</span></h3>";
+    
 if($data[1]==1)
 {
     echo "<h2 class='resultado'>Correcto!!</h2>";
@@ -30,7 +32,7 @@ if($data[1]==0)
     echo "<h2 class='resultado'>Fallaste!!</h2>";
 
 }
-echo "<h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es<br><span> ".$data[0]["respuesta"]."</span></h3>";
+
 
   if($data["temaoale"]=="ale")
     {
