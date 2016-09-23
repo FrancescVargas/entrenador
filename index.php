@@ -6,7 +6,7 @@ $c=$app->getContainer();
 $app->add(new \Slim\Middleware\SafeURLMiddleware());
 $auth=new \Slim\Middleware\HttpBasicAuthentication([
   "users"=>[
-    "admin2"=>"admin",
+    "admin"=>"admin",
     "rodolfo"=>"contrasenarodolfo"
     ]
 
