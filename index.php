@@ -1,5 +1,6 @@
 <?php
 require "vendor/autoload.php";
+require "contadorpaginas.php";
 $app=new Slim\App();
 $c=$app->getContainer();
 $app->add(new \Slim\Middleware\SafeURLMiddleware());
@@ -10,6 +11,9 @@ $auth=new \Slim\Middleware\HttpBasicAuthentication([
     ]
 
   ]);
+$app->add(new ContadorMiddleware());
+$app->add(new Contador2Middleware());
+
 $c["bd"]=function()
 {
     $pdo=new PDO("mysql:host=localhost;dbname=entrenador","root");

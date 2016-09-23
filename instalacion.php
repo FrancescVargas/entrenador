@@ -220,7 +220,7 @@ sql;
          $sql=<<<sql
 
 INSERT INTO `contador` (`url`, `contador`) VALUES ('/', '0'),
-('/pregale', '0'),('/pregtemas', '0'),('/temas', '0'),('/resultado', '0'),('/meterpregunta', '0'),('/crearpre', '0');
+('pregale', '0'),('pregtemas', '0'),('temas', '0'),('resultado', '0'),('meterpregunta', '0'),('crearpre', '0'),('Ciencias', '0'),('Geografía', '0'),('Historia', '0'),('Deportes', '0');
 sql;
 
           $res=$conexion->exec($sql);
