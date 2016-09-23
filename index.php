@@ -229,7 +229,18 @@ $app->post("/meterpregunta",function($request,$response,$args)
 
           });
 
+          $app->get("/vercontador",function($request,$response,$args)
+                    {
+                        $con=$this->bd;
+                        $sql="SELECT * from contador;";
+                        $res=$con->query($sql);
+                        $datos=$res->fetchAll();
 
+                      $response=$this->view->render($response,"plantillacontador.php",$datos);
+                      return $response;
+
+
+                    })->add($auth);
 
 
 $app->run();

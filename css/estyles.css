@@ -21,7 +21,7 @@
         }
       .menu
       {
-        width: 24%;
+        width: 19.5%;
         font-size: 2em;
         font-weight: bold;
         display: inline-block;
@@ -30,6 +30,10 @@
         box-sizing: border-box;
         margin:0;
         background-color: aliceblue;
+      }
+      .menu a
+      {
+        text-decoration: none;
       }
 .menu:hover
 {

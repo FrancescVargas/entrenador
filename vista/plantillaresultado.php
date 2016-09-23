@@ -14,13 +14,14 @@
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregtemas">Preguntas por Temas</a></div>
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/crearpre">Crear Preguntas</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/vercontador">Ver Estadísticas</a></div>
 </nav>
 <main>
 <?php
 
 
 echo "<h3>La respuesta a la pregunta ".$data[0]["pregunta"]." es<br><span class='contador3'>3</span><span class='contador2'>2</span><span class='contador1'>1</span><br><span> ".$data[0]["respuesta"]."</span></h3>";
-    
+
 if($data[1]==1)
 {
     echo "<h2 class='resultado'>Correcto!!</h2>";

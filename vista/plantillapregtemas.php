@@ -14,16 +14,17 @@
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregtemas">Preguntas por Temas</a></div>
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/pregale">Preguntas Aleatorias</a></div>
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/crearpre">Crear Preguntas</a></div>
+  <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/vercontador">Ver Estadísticas</a></div>
 </nav>
 <main>
 <?php
 
 
-    
+
 echo "<h2>Pregunta de ".$data["pregunta"]["titulo"]."</h2>";
 echo "<h3>".$data["pregunta"]["pregunta"]."</h3>";
-    
-    
+
+
     echo '<form action="resultado" method="get">';
     echo '<input type="hidden" name="id" value="'.$data["pregunta"]["id"].'">';
     echo '<input type="hidden" name="temaoale" value="tema">';
@@ -31,11 +32,11 @@ echo "<h3>".$data["pregunta"]["pregunta"]."</h3>";
     {
        echo '<input type="radio" name="resp" value="'.$data["respuesta"][$i]["verdadera"].'">'.$data["respuesta"][$i]["respuesta"].'<br>';
     }
-  
+
   echo '<input type="submit" value="Ok">
-  
+
 </form><button><a href="http://localhost/Francesc/GIT-entrenador/entrenador/index.php/pregale">Otra pregunta, por favor?</a></button>'
-    
+
 
 
  ?>
