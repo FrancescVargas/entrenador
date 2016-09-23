@@ -35,11 +35,11 @@
 {
     font-size: 2.3em;
     background-color: #83db0b;
-    
+
 }
       main
       {
-        
+
         text-align: center;
         color:blue;
 
@@ -73,14 +73,14 @@
 }
 .contador3
 {
- visibility: hidden; 
+ visibility: hidden;
     color:aqua;
     animation:contador;
     animation-duration: 1s;
 }
 .contador2
 {
-   visibility: hidden; 
+   visibility: hidden;
     color:crimson;
     animation:contador;
     animation-duration: 1s;
@@ -88,16 +88,16 @@
 }
 .contador1
 {
-   visibility: hidden; 
+   visibility: hidden;
     color:red;
     animation:contador;
     animation-duration: 1s;
     animation-delay: 2s;
 }
-@keyframes contador 
+@keyframes contador
     {
-         from {position: relative; visibility: visible;font-size: 3em;}
-         to {position: relative;visibility: visible;font-size: 3em;}
+         from {position: absolute; visibility: visible;font-size: 3em;}
+         to {position: absolute;visibility: visible;font-size: 3em;}
     }
 h3 span
 {
@@ -106,7 +106,7 @@ h3 span
     animation: h3span;
     animation-duration: 3s;
 }
-@keyframes h3span 
+@keyframes h3span
     {
          from {visibility: hidden;}
          to {visibility: hidden;}
@@ -129,7 +129,7 @@ h3 span
         font-size: 2em;
         font-weight: bold;
         padding: 2% 15%;
-        
+
       }
       #subinicio span
       {
@@ -137,10 +137,10 @@ h3 span
         font-size: 2em;
         animation: sub;
           animation-duration: 3s;
-          
+
       }
 
-    @keyframes sub 
+    @keyframes sub
     {
          from {position: relative; left: -800px}
          to {left: 500px;}

@@ -188,7 +188,51 @@ sql;
                   echo "<p>Se han añadido $res filas en la tabla respuestas</p>";
               }
 
+// ----------------------------------------------------------------------------------- //
+        
+         // creamos tabla contador
 
+
+          $sql=<<<sql
+create table contador(
+	url varchar(100) primary key,
+	contador int
+  
+);
+sql;
+
+          $res=$conexion->exec($sql);
+          if($res===FALSE)
+              {
+                  echo "<p>No se ha podido crear la tabla contador</p>";
+                  echo "<p>".$conexion->errorInfo()[2]."</p>";
+              }
+          else
+              {
+                  echo "<p>Tabla contador creada!!!</p>";
+              }
+
+
+
+        // insertamos en respuestas
+
+
+         $sql=<<<sql
+
+INSERT INTO `contador` (`url`, `contador`) VALUES ('/', '0'),
+('/pregale', '0'),('/pregtemas', '0'),('/temas', '0'),('/resultado', '0'),('/meterpregunta', '0'),('/crearpre', '0');
+sql;
+
+          $res=$conexion->exec($sql);
+          if($res===FALSE)
+              {
+                  echo "<p>Error al añadir datos en respuestas</p>";
+                  echo "<p>".$conexion->errorInfo()[2]."</p>";
+              }
+          else
+              {
+                  echo "<p>Se han añadido $res filas en la tabla respuestas</p>";
+              }
 
 
         ?>

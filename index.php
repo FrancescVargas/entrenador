@@ -2,7 +2,14 @@
 require "vendor/autoload.php";
 $app=new Slim\App();
 $c=$app->getContainer();
+$app->add(new \Slim\Middleware\SafeURLMiddleware());
+$auth=new \Slim\Middleware\HttpBasicAuthentication([
+  "users"=>[
+    "admin2"=>"admin",
+    "rodolfo"=>"contrasenarodolfo"
+    ]
 
+  ]);
 $c["bd"]=function()
 {
     $pdo=new PDO("mysql:host=localhost;dbname=entrenador","root");
@@ -166,7 +173,7 @@ $app->get("/crearpre",function($request,$response,$args)
             return $response;
 
 
-          });
+          })->add($auth);
 
 $app->post("/meterpregunta",function($request,$response,$args)
           {
