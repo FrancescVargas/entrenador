@@ -19,22 +19,57 @@
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/vercontador">Ver Estadísticas</a></div>
 </nav>
 <main>
-  <div style="width:400px;">
+    <table><tr><td colspan="2">
+        <h2>Estadísticas de preguntas</h2></td></tr>
+        <tr><td>
+  <div class="chart" style="width:400px;">
 <?php
 
 
-echo "<h2>Estadísticas de preguntas</2>";
-echo "<h3>Preguntas Aleatorias: ".$data[7]["contador"]."</3>";
-echo "<h3>Preguntas Por Temas: ".$data[10]["contador"]."</3>";
-echo "<h3>De las cuales: <br>
-Ciencias: ".$data[1]["contador"]."<br>
-Geografía: ".$data[4]["contador"]."<br>
-Deportes: ".$data[3]["contador"]."<br>
-Historia: ".$data[5]["contador"]."</br>";
+
+
+      
+echo '<canvas id="yourChart"></canvas>';
+
+echo '<script>
+var ctx = document.getElementById("yourChart");
+var myChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+        labels: ["Aleatorias", "Por Temas"],
+        datasets: [{
+            label: "Aleatorias/Temas",
+            data: ['.$data[7]["contador"].', '.$data[10]["contador"].'],
+            backgroundColor: [
+                "rgba(96, 59, 67, 0.2)",
+                "rgba(255, 99, 132, 0.2)"
+            ],
+            borderColor: [
+                "rgba(255,99,132,1)",
+                "rgba(255,99,132,1)"
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script></div></td>';
+      
+     
+echo '<td><div class="chart" style="width:400px;">';
+      
 
 
 
-echo '<canvas id="myChart" width="50" height="50"></canvas>';
+echo '<canvas id="myChart"></canvas>';
 
 echo '<script>
 var ctx = document.getElementById("myChart");
@@ -46,10 +81,10 @@ var myChart = new Chart(ctx, {
             label: "Preguntas según Temas",
             data: ['.$data[1]["contador"].', '.$data[4]["contador"].','.$data[3]["contador"].','.$data[5]["contador"].'],
             backgroundColor: [
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(255, 99, 132, 0.2)"
+                "rgba(227, 28, 70, 0.2)",
+                "rgba(21, 87, 152, 0.2)",
+                "rgba(19, 62, 15, 0.2)",
+                "rgba(232, 130, 12, 0.2)"
             ],
             borderColor: [
                 "rgba(255,99,132,1)",
@@ -73,7 +108,7 @@ var myChart = new Chart(ctx, {
 </script>';
 
 ?>
-</div>
+            </div></td></tr></table>
 
 </main>
 <footer><p>Por Francesc Vargas con la colaboración de Actibyti Barcelona</p></footer>
