@@ -19,10 +19,10 @@
   <div class="menu"><a href="/Francesc/GIT-entrenador/entrenador/index.php/vercontador">Ver Estadísticas</a></div>
 </nav>
 <main>
-    <table><tr><td colspan="2">
-        <h2>Estadísticas de preguntas</h2></td></tr>
+    <table><tr><th colspan="2">
+        <h2>Estadísticas de preguntas</h2></th></tr>
         <tr><td>
-  <div class="chart" style="width:400px;">
+  <div class="chart">
 <?php
 
 
@@ -64,7 +64,7 @@ var myChart = new Chart(ctx, {
 </script></div></td>';
       
      
-echo '<td><div class="chart" style="width:400px;">';
+echo '<td><div class="chart">';
       
 
 
