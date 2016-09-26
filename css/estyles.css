@@ -22,7 +22,7 @@
       .menu
       {
         width: 19.5%;
-        font-size: 2em;
+        font-size: 1.7em;
         font-weight: bold;
         display: inline-block;
         text-align: center;
@@ -37,7 +37,7 @@
       }
 .menu:hover
 {
-    font-size: 2.3em;
+    font-size: 1.9em;
     background-color: #83db0b;
 
 }
@@ -154,14 +154,36 @@ h3 span
     input
 {
     margin:15px;
+    
 }
-
+.chart
+{
+ margin: 0 20px;
+    width:400px;
+}
+table
+{
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+td
+{
+    border:3px solid blue;
+    padding: 4px;
+}
+th
+{
+    background-color: rgba(191, 25, 25, 0.56);
+    border:3px solid blue;
+}
 
       footer
       {
         text-align: center;
         background-color: brown;
         color:white;
+          clear: both;
 
       }
       footer p
@@ -170,3 +192,54 @@ h3 span
         padding: 1%;
         margin: 0;
       }
+
+
+/*  --------------------------  MEDIAQUERIES ------------------------ */
+
+
+
+
+@media (max-width:770px)
+{
+   main
+    {
+     
+        margin:auto;
+        padding: 10px 3%;
+        
+    }
+    nav
+    {
+        float: left;
+        width: 20%;
+    }
+    
+    .menu
+      {
+        width: 100%;
+        font-size: 1em;
+        display: block;
+        padding: 20px 5px;
+        
+      }
+    .menu a
+    {
+        display: inline-block;
+    }
+      
+.menu:hover
+{
+    font-size: 1.2em;
+    
+
+}
+    th,td,tr
+    {
+        display: inline-block;
+    }
+    .chart
+{
+ margin: 0 5px;
+    
+}
+}
